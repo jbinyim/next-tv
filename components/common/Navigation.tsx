@@ -1,5 +1,5 @@
 "use client";
-import styles from "../styles/common/navigation.module.css";
+import styles from "../../styles/common/navigation.module.css";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 
