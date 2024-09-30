@@ -21,6 +21,10 @@
   cursor: pointer;
 }
 
+.navLeft h1 span {
+  color: #25f7cd;
+}
+
 .navLeft ul {
   display: flex;
   align-items: center;

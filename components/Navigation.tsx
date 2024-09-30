@@ -18,7 +18,9 @@ const Navigation = () => {
   return (
     <div className={styles.nav}>
       <div className={styles.navLeft}>
-        <h1 onClick={handleLogoClick}>NEXT TV</h1>
+        <h1 onClick={handleLogoClick}>
+          NEXT <span>T</span>V
+        </h1>
         <ul>
           <li className={(path === "/" && styles.navChose) || ""}>
             <Link href="/">Home</Link>
