@@ -19,7 +19,7 @@ const MainSlider = () => {
       <div className="slider-container">
         <Slider {...settings}>
           <div>
-            <h3>1</h3>
+            <h3>wr3rq</h3>
           </div>
           <div>
             <h3>2</h3>
