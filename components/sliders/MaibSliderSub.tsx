@@ -2,7 +2,7 @@
 import styles from "../../styles/sliders/mainSlider.module.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import React from "react";
+import React, { Component } from "react";
 import Slider from "react-slick";
 
 interface Movie {
@@ -27,7 +27,7 @@ interface MovieResponse {
   popMovies: Movie[];
 }
 
-const MainSliderSub = ({ popMovies }) => {
+const MainSliderSub = ({ popMovies }: MovieResponse) => {
   console.log(popMovies);
 
   const settings = {
@@ -42,24 +42,14 @@ const MainSliderSub = ({ popMovies }) => {
     <div className={styles.container}>
       <div className={styles.sliderContainer}>
         <Slider {...settings}>
-          <div>
-            <img src="https://placehold.co/600x400" alt="" />
-          </div>
-          <div>
-            <img src="https://placehold.co/600x400" alt="" />
-          </div>
-          <div>
-            <img src="https://placehold.co/600x400" alt="" />
-          </div>
-          <div>
-            <img src="https://placehold.co/600x400" alt="" />
-          </div>
-          <div>
-            <img src="https://placehold.co/600x400" alt="" />
-          </div>
-          <div>
-            <img src="https://placehold.co/600x400" alt="" />
-          </div>
+          {popMovies.map((popMovie, idx) => (
+            <div key={idx} className={styles.center}>
+              <img
+                src={`https://image.tmdb.org/t/p/original/${popMovie.backdrop_path}`}
+                alt=""
+              />
+            </div>
+          ))}
         </Slider>
       </div>
     </div>

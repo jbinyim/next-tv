@@ -12,7 +12,7 @@ const getPopularMovie = async () => {
 const MaibSlider = async () => {
   const popMovies = await getPopularMovie();
 
-  return <MainSliderSub popMovies={popMovies} />;
+  return <MainSliderSub popMovies={popMovies.slice(0, 6)} page={0} />;
 };
 
 export default MaibSlider;
